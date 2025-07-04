@@ -3,6 +3,7 @@ name = "nix-update-docker-image"
 version = "0.1.0"
 description = "A tool to update Docker image digests in Nix files."
 authors = [{ name = "Dmitriy", email = "ataraxiadev@ataraxiadev.com" }]
+license = { text = "MIT" }
 dependencies = ["requests", "pyyaml", "packaging"]
 
 [project.scripts]

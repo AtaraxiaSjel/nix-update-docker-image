@@ -28,6 +28,7 @@ buildPythonApplication {
     description = "A tool to update Docker image digests in Nix files.";
     homepage = "https://github.com/AtaraxiaSjel/nix-update-docker-image";
     license = licenses.mit;
-    maintainers = with maintainers; [ ataraxiadev ];
+    maintainers = with maintainers; [ ataraxiasjel ];
+    mainProgram = "nix-update-docker-image";
   };
 }
