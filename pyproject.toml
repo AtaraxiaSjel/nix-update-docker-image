@@ -1,0 +1,9 @@
+[project]
+name = "nix-update-docker-image"
+version = "0.1.0"
+description = "A tool to update Docker image digests in Nix files."
+authors = [{ name = "Dmitriy", email = "ataraxiadev@ataraxiadev.com" }]
+dependencies = ["requests", "pyyaml", "packaging"]
+
+[project.scripts]
+nix-update-docker-image = "nix_update_docker_image.main:main"

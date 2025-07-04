@@ -1,0 +1,27 @@
+# Example configuration for nix-update-docker-image
+
+# Registry credentials for private repositories.
+# You can add multiple registries.
+registries:
+  docker.io:
+    username: "your-dockerhub-username"
+    token: "your-dockerhub-token"
+  ghcr.io:
+    username: "your-github-username"
+    token: "your-github-token"
+
+# Version patterns are used to select which version of a docker image to use.
+# The `pattern` is a regex that is matched against the image name.
+# The `version_regex` is a regex that is matched against the tags of the image.
+# The first matching `version_regex` is used.
+version_patterns:
+  - pattern: '.*/qbittorrent[:@].*'
+    version_regex: '^5\.[0-9]+\.[0-9]+.+ls[0-9]+$'
+  - pattern: '.*/nginx[:@].*'
+    version_regex: '^alpine$'
+  - pattern: '.*/stirling-pdf[:@].*'
+    version_regex: '^latest-fat$'
+  - pattern: '.*/recyclarr[:@].*'
+    version_regex: '^7$'
+  - pattern: '.*'
+    version_regex: '^latest$'
